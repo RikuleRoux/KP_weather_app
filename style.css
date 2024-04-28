@@ -1,0 +1,189 @@
+/* Set background image, font-family, and center content */
+body {
+    background-image: url('https://uploads-ssl.webflow.com/6033f41cf7c21610a8e93855/662eabd13480e9da2bc6d603_background1.png');
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Style for weather container */
+#weather-container {
+    background: rgba(30, 30, 30, 0.3);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Style for common elements */
+h2, label, p {
+    color: #fff;
+    margin: 8px 0;
+}
+
+/* Style for search container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for input */
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 20px 5px;
+}
+
+/* Style for button container */
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Style for button */
+button {
+    background: #2196F3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    width: 80px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #3073a9;
+}
+
+/* Style for temperature display */
+#temp-div p {
+    font-size: 60px;
+    margin-top: -20px;
+}
+
+/* Style for weather info */
+#weather-info {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Style for weather icon */
+#weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none; /* Initially hidden */
+}
+
+/* Style for hourly forecast */
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style for hourly items */
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+/* Style for switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff84;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #2196F3;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ffffff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Style for temperature unit toggle */
+#unit-toggle span {
+    color: #ffffff; 
+    font-weight: bold;
+}
+
+/* Add spinner animation */
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spinner 0.6s linear infinite;
+    display: none; /* Initially hidden */
+}
+

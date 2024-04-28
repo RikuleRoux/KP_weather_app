@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="weather-container">
+    <h2>Weather App</h2>
+    <div class="search-container">
+        <input type="text" id="city" placeholder="Enter city">
+        <div class="button-container">
+            <button onclick="getWeather()">Search</button>
+            <button id="refresh-button" style="display: none;" onclick="refreshWeather()">Refresh</button>
+        </div>
+    </div>
+    <div id="unit-toggle" style="display: none;">
+        <span>C</span>
+        <label class="switch" for="unit-switch">
+            <input type="checkbox" id="unit-switch" onclick="toggleUnit()">
+            <span class="slider round"></span>
+        </label>
+        <span>F</span>
+    </div>
+    <div id="loading-spinner" class="spinner"></div>
+    <img id="weather-icon" alt="Weather Icon">
+    <div id="temp-div"></div>
+    <div id="weather-info"></div>
+    <div id="hourly-forecast"></div>
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
+
+
